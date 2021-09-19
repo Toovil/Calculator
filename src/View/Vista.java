@@ -425,7 +425,14 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonSUMActionPerformed
 
     private void ButtonEQUALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEQUALActionPerformed
-        
+        if(TextField.getText().contains("+")){
+            String[] text_split = TextField.getText().split("\\+");        
+            int acomuladorsum = 0;
+            for(int i = 0; i < text_split.length; i++){
+                acomuladorsum = acomuladorsum + Integer.parseInt(text_split[i]);
+            }
+            TextField.setText(Integer.toString(acomuladorsum));
+        }        
     }//GEN-LAST:event_ButtonEQUALActionPerformed
    
     
