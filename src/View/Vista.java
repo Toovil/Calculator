@@ -50,6 +50,12 @@ public class Vista extends javax.swing.JFrame {
         ButtonSUM = new javax.swing.JButton();
         ButtonDEL = new javax.swing.JButton();
         ButtonEQUAL = new javax.swing.JButton();
+        ButtonPorcentaje = new javax.swing.JButton();
+        ButtonCE = new javax.swing.JButton();
+        ButtonPI = new javax.swing.JButton();
+        Button1DIVx = new javax.swing.JButton();
+        Buttonexpdos = new javax.swing.JButton();
+        Buttonraiz = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
@@ -255,13 +261,79 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
+        ButtonPorcentaje.setBackground(new java.awt.Color(102, 102, 102));
+        ButtonPorcentaje.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonPorcentaje.setText("%");
+        ButtonPorcentaje.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ButtonPorcentaje.setFocusPainted(false);
+        ButtonPorcentaje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonPorcentajeActionPerformed(evt);
+            }
+        });
+
+        ButtonCE.setBackground(new java.awt.Color(102, 102, 102));
+        ButtonCE.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonCE.setText("CE");
+        ButtonCE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ButtonCE.setFocusPainted(false);
+        ButtonCE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonCEActionPerformed(evt);
+            }
+        });
+
+        ButtonPI.setBackground(new java.awt.Color(102, 102, 102));
+        ButtonPI.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonPI.setText("π");
+        ButtonPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ButtonPI.setFocusPainted(false);
+        ButtonPI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonPIActionPerformed(evt);
+            }
+        });
+
+        Button1DIVx.setBackground(new java.awt.Color(102, 102, 102));
+        Button1DIVx.setForeground(new java.awt.Color(255, 255, 255));
+        Button1DIVx.setText("1/x");
+        Button1DIVx.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Button1DIVx.setFocusPainted(false);
+        Button1DIVx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button1DIVxActionPerformed(evt);
+            }
+        });
+
+        Buttonexpdos.setBackground(new java.awt.Color(102, 102, 102));
+        Buttonexpdos.setForeground(new java.awt.Color(255, 255, 255));
+        Buttonexpdos.setText("x²");
+        Buttonexpdos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Buttonexpdos.setFocusPainted(false);
+        Buttonexpdos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonexpdosActionPerformed(evt);
+            }
+        });
+
+        Buttonraiz.setBackground(new java.awt.Color(102, 102, 102));
+        Buttonraiz.setForeground(new java.awt.Color(255, 255, 255));
+        Buttonraiz.setText("√x");
+        Buttonraiz.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Buttonraiz.setFocusPainted(false);
+        Buttonraiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonraizActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Button7, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -281,22 +353,48 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(Button3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ButtonDIV, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ButtonMULT, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ButtonRESTA, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ButtonSUM, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ButtonSUM, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ButtonEQUAL, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(ButtonPI, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ButtonPorcentaje, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ButtonCE, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Button1DIVx, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Buttonexpdos, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Buttonraiz, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ButtonDEL, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ButtonEQUAL, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(TextField, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                            .addComponent(ButtonDIV, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(TextField))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonDEL, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonCE, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonPorcentaje, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonPI, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtonDIV, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Button1DIVx, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Buttonexpdos, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Buttonraiz, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -312,29 +410,26 @@ public class Vista extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Button2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Button9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Button9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ButtonMULT, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Button6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Button6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ButtonRESTA, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Button3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Button3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ButtonSUM, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(162, 162, 162)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ButtonDot, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(ButtonSUM, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ButtonEQUAL, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ButtonDIV, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ButtonDEL, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ButtonMULT, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ButtonRESTA, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(ButtonDot, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ButtonEQUAL, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
                         .addComponent(Button0, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -371,7 +466,11 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_TextFieldActionPerformed
 
     private void ButtonDELActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDELActionPerformed
-        TextField.setText(null);
+        /*for(int i = TextField.getText().length(); i >= 0; i--){
+            int numT = TextField.getText().length();
+            TextField.setText(null);
+            break;
+        }*/
     }//GEN-LAST:event_ButtonDELActionPerformed
 
     private void Button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button4ActionPerformed
@@ -421,7 +520,7 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonRESTAActionPerformed
 
     private void ButtonSUMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSUMActionPerformed
-         TextField.setText(TextField.getText() + "+");
+        TextField.setText(TextField.getText() + "+");
     }//GEN-LAST:event_ButtonSUMActionPerformed
 
     private void ButtonEQUALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEQUALActionPerformed
@@ -430,11 +529,43 @@ public class Vista extends javax.swing.JFrame {
             int acomuladorsum = 0;
             for(int i = 0; i < text_split.length; i++){
                 acomuladorsum = acomuladorsum + Integer.parseInt(text_split[i]);
+                TextField.setText(Integer.toString(acomuladorsum));
+            }            
+        }
+        if(TextField.getText().contains("-")){
+            String[] text_split = TextField.getText().split("\\-");        
+            for(int i = 0; i < text_split.length; i++){
+                
             }
-            TextField.setText(Integer.toString(acomuladorsum));
-        }        
+                    
+        }
+    
+        
     }//GEN-LAST:event_ButtonEQUALActionPerformed
-   
+
+    private void ButtonPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPorcentajeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonPorcentajeActionPerformed
+
+    private void ButtonCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCEActionPerformed
+        TextField.setText(null);        
+    }//GEN-LAST:event_ButtonCEActionPerformed
+
+    private void ButtonPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonPIActionPerformed
+
+    private void Button1DIVxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button1DIVxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Button1DIVxActionPerformed
+
+    private void ButtonexpdosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonexpdosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonexpdosActionPerformed
+
+    private void ButtonraizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonraizActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonraizActionPerformed
     
     /**
      * @param args the command line arguments
@@ -474,6 +605,7 @@ public class Vista extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button0;
     private javax.swing.JButton Button1;
+    private javax.swing.JButton Button1DIVx;
     private javax.swing.JButton Button2;
     private javax.swing.JButton Button3;
     private javax.swing.JButton Button4;
@@ -482,13 +614,18 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton Button7;
     private javax.swing.JButton Button8;
     private javax.swing.JButton Button9;
+    private javax.swing.JButton ButtonCE;
     private javax.swing.JButton ButtonDEL;
     private javax.swing.JButton ButtonDIV;
     private javax.swing.JButton ButtonDot;
     private javax.swing.JButton ButtonEQUAL;
     private javax.swing.JButton ButtonMULT;
+    private javax.swing.JButton ButtonPI;
+    private javax.swing.JButton ButtonPorcentaje;
     private javax.swing.JButton ButtonRESTA;
     private javax.swing.JButton ButtonSUM;
+    private javax.swing.JButton Buttonexpdos;
+    private javax.swing.JButton Buttonraiz;
     private javax.swing.JTextField TextField;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
