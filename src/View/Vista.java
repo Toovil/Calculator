@@ -438,6 +438,12 @@ public class Vista extends javax.swing.JFrame {
                 acomuladorsum = acomuladorsum + Integer.parseInt(text_split[i]);
             }
             TextField.setText(Integer.toString(acomuladorsum));
+        }
+        if(TextField.getText().contains("-")){
+            String[] text_split = TextField.getText().split("\\-");        
+            for(int i = text_split.length; i > 0; i--){
+                System.out.println("Resta");
+            }
         }        
     }//GEN-LAST:event_ButtonEQUALActionPerformed
    /**
